@@ -1,19 +1,26 @@
 import React, { Component } from "react";
-import { Link, Route } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
+import { Route } from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import MyNavLink from "./components/MyNavLink";
+
+import "./App.css";
 export default class App extends Component {
   render() {
     return (
       <div>
-        <h2>React Router Demo</h2>
-        <Link className="item active" to="/about">
+        <Header></Header>
+        {/* <NavLink activeClassName="active" className="item" to="/about">
           About
-        </Link>
-        <Link className="item" to="/home">
+        </NavLink>
+        <NavLink activeClassName="active" className="item" to="/home">
           Home
-        </Link>
-        <Route path="/About" component={About}></Route>
+        </NavLink> */}
+        <MyNavLink to="/about" >About</MyNavLink>
+        <MyNavLink to="/home" >Home</MyNavLink>
+
+        <Route path="/about" component={About}></Route>
         <Route path="/Home" component={Home}></Route>
       </div>
     );

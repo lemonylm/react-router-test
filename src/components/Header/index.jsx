@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class index extends Component {
+export default class Header extends Component {
     render() {
         return (
             <div>
-                <h3>我是About的内容</h3>
+                 <h2>React Router Demo</h2>
             </div>
         )
     }
